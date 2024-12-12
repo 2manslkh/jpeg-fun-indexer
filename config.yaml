@@ -6,7 +6,7 @@ networks:
   contracts:
   - name: Marketplace
     address:
-    - 0x01dA06dCAE5F1E49E4333473f1dDeA9DBC6D1FF7
+    - 0xF3aC8b0E5F14A9319708B98156e4C6cb75Aab37A
     handler: src/EventHandlers.ts
     events:
     - event: AuctionBuffersUpdated(uint256 timeBuffer, uint256 bidBufferBps)
