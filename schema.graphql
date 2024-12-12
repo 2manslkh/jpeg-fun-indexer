@@ -1,0 +1,69 @@
+type Marketplace_AuctionBuffersUpdated {
+  id: ID!
+  timeBuffer: BigInt!
+  bidBufferBps: BigInt!
+}
+
+type Marketplace_AuctionClosed {
+  id: ID!
+  listingId: BigInt!
+  closer: String!
+  cancelled: Boolean!
+  auctionCreator: String!
+  winningBidder: String!
+}
+
+type Marketplace_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type Marketplace_ListingAdded {
+  id: ID!
+  listingId: BigInt!
+  assetContract: String!
+  lister: String!
+  tokenId: BigInt!
+  tokenOwner: String!
+  currency: String!
+  startTime: BigInt!
+  endTime: BigInt!
+  quantity: BigInt!
+  reservePricePerToken: BigInt!
+  tokenType: String!
+  buyoutPricePerToken: BigInt!
+  listingType: BigInt!
+}
+
+type Marketplace_ListingRemoved {
+  id: ID!
+  listingId: BigInt!
+  listingCreator: String!
+}
+
+type Marketplace_ListingUpdated {
+  id: ID!
+  listingId: BigInt!
+  listingCreator: String!
+}
+
+type Marketplace_NewOffer {
+  id: ID!
+  listingId: BigInt!
+  offeror: String!
+  listingType: BigInt!
+  quantityWanted: BigInt!
+  totalOfferAmount: BigInt!
+  currency: String!
+}
+
+type Marketplace_NewSale {
+  id: ID!
+  listingId: BigInt!
+  assetContract: String!
+  lister: String!
+  buyer: String!
+  quantityBought: BigInt!
+  totalPricePaid: BigInt!
+}
+
