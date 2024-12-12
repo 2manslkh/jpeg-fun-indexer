@@ -6,7 +6,7 @@ networks:
   contracts:
   - name: Marketplace
     address:
-    - 0xe4C73E1a589Ac791EE21133B62D967Da4fb4372C
+    - 0x01dA06dCAE5F1E49E4333473f1dDeA9DBC6D1FF7
     handler: src/EventHandlers.ts
     events:
     - event: AuctionBuffersUpdated(uint256 timeBuffer, uint256 bidBufferBps)
@@ -14,7 +14,7 @@ networks:
     - event: Initialized(uint8 version)
     - event: ListingAdded(uint256 indexed listingId, address indexed assetContract, address indexed lister, (uint256,address,address,uint256,uint256,uint256,uint256,address,uint256,uint256,uint8,uint8) listing)
     - event: ListingRemoved(uint256 indexed listingId, address indexed listingCreator)
-    - event: ListingUpdated(uint256 indexed listingId, address indexed listingCreator)
+    - event: ListingUpdated(uint256 indexed listingId, address indexed listingCreator, (uint256,address,address,uint256,uint256,uint256,uint256,address,uint256,uint256,uint8,uint8) listing)
     - event: NewOffer(uint256 indexed listingId, address indexed offeror, uint8 indexed listingType, uint256 quantityWanted, uint256 totalOfferAmount, address currency)
     - event: NewSale(uint256 indexed listingId, address indexed assetContract, address indexed lister, address buyer, uint256 quantityBought, uint256 totalPricePaid)
 rollback_on_reorg: false

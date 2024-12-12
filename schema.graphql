@@ -67,3 +67,22 @@ type Marketplace_NewSale {
   totalPricePaid: BigInt!
 }
 
+type Marketplace_Listings {
+  id: ID!
+  listingId: BigInt!
+  assetContract: String!
+  lister: String!
+  tokenId: BigInt!
+  tokenOwner: String!
+  currency: String!
+  startTime: BigInt!
+  endTime: BigInt!
+  quantity: BigInt!
+  reservePricePerToken: BigInt!
+  tokenType: String!
+  buyoutPricePerToken: BigInt!
+  listingType: BigInt!
+  isActive: Boolean!
+  quantityRemaining: BigInt!
+}
+
